@@ -29,5 +29,13 @@ public class Servicio extends Ticket {
         System.out.println("Espacio de Maleta: " + espaciomaleta);
         System.out.println("Maleta Adicional: " + (maletaadicional ? "Sí" : "No"));
     }
+
+    
+    @Override
+    public double calcularPrecio() {
+        double precioBase = super.calcularPrecio();
+        double costoAdicionalMaleta = espaciomaleta > 1 ? 10.0 : 0.0; // Ejemplo adicional de costo por maleta
+        return precioBase + precioadicional;
+    }
 }
 
