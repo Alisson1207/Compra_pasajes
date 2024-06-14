@@ -44,4 +44,10 @@ public class Ruta extends Ticket{
     public void setPreciobase(Double preciobase) {
         this.preciobase = preciobase;
     }
+   @Override
+    public double calcularPrecio() {
+        double precioBase = super.calcularPrecio();
+        double costoAdicionalMaleta = espaciomaleta > 1 ? 10.0 : 0.0; // Ejemplo adicional de costo por maleta
+        return precioBase + precioadicional;
+    } 
 }
