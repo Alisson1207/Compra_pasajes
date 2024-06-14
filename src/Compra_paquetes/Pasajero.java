@@ -10,4 +10,12 @@ public class Pasajero extends Ticket{
         super(numeroticket, asiento, ruta, nombrepasajero, tiposervicio, precio);
         this.nombre = nombre;
     }
+    
+    @Override
+    public void imprimirDatos() {
+        super.imprimirDatos();
+        System.out.println("Tipo de Servicio: " + tiposervicio);
+        System.out.println("Espacio de Maleta: " + espaciomaleta);
+        System.out.println("Maleta Adicional: " + (maletaadicional ? "Sí" : "No"));
+    }
 }
