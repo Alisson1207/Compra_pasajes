@@ -20,5 +20,14 @@ public class Servicio extends Ticket {
         this.espaciomaleta = espaciomaleta;
         this.maletaadicional = maletaadicional;
     }
+
+
+    @Override
+    public void imprimirDatos() {
+        super.imprimirDatos();
+        System.out.println("Tipo de Servicio: " + tipoServicio);
+        System.out.println("Espacio de Maleta: " + espaciomaleta);
+        System.out.println("Maleta Adicional: " + (maletaadicional ? "Sí" : "No"));
+    }
 }
 
