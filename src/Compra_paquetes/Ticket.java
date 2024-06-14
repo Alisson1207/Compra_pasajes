@@ -69,4 +69,36 @@ public class Ticket {
     public void setPrecio(Double precio) {
         this.precio = precio;
     }
+
+    // Métodos
+    public abstract double calcularCosto();
+
+    // Getters y Setters
+    public Ruta getRuta() {
+        return ruta;
+    }
+
+    public void setRuta(Ruta ruta) {
+        this.ruta = ruta;
+    }
+
+    public Pasajero getPasajero() {
+        return pasajero;
+    }
+
+    public void setPasajero(Pasajero pasajero) {
+        this.pasajero = pasajero;
+    }
+
+    public double calcularPrecio() {
+        return ruta.getPrecio();
+    }
+// Método para imprimir los datos del ticket
+    public void imprimirDatos() {
+        System.out.println("Datos del ticket:");
+        System.out.println("Ruta: " + ruta.getRuta() + " - " + ruta.getDestino());
+        System.out.println("Pasajero: " + pasajero.getPasajero() + " (" + pasajero.getDocumento() + ")");
+        System.out.println("Precio Base: $" + calcularPrecio());
+    }
+}
 }
